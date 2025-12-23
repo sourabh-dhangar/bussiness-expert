@@ -1,0 +1,296 @@
+/* --- HERO SECTION --- */
+.who-hero {
+  position: relative; 
+  height: 60vh; 
+  min-height: 450px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  text-align: center; 
+  color: white; 
+  margin-top: -80px; 
+  padding-top: 80px;
+  overflow: hidden;
+  background-color: #0f172a;
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  z-index: 0;
+}
+
+.hero-overlay-who {
+  position: absolute; inset: 0;
+  background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7)); 
+  z-index: 1;
+}
+
+.hero-content-who { 
+  position: relative; 
+  z-index: 2; 
+  max-width: 900px; 
+  padding: 20px; 
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-title-large { 
+  color: white;
+  font-size: 3.5rem; 
+  font-weight: 900; 
+  margin: 20px 0; 
+  line-height: 1.2;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle { 
+  font-size: 1.4rem; 
+  color: #e2e8f0; 
+  font-weight: 500; 
+}
+
+.badge-who { 
+  background: var(--accent-orange); 
+  color: white; 
+  padding: 8px 20px; 
+  border-radius: 30px; 
+  font-weight: 700; 
+  font-size: 0.9rem; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- SECTIONS & LAYOUT --- */
+.section-box { padding: 100px 5%; }
+.bg-white { background-color: white; }
+.bg-gray { background-color: #f8fafc; }
+.bg-dark { background-color: #0f172a; }
+
+.grid-container-who {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 80px; 
+  max-width: 1300px; 
+  margin: 0 auto; 
+  align-items: center;
+}
+
+.center-header { text-align: center; margin-bottom: 60px; }
+
+/* --- TYPOGRAPHY --- */
+.tag-who { 
+  color: var(--accent-orange); 
+  font-weight: 800; 
+  letter-spacing: 2px; 
+  font-size: 1rem; 
+  display: block; 
+  margin-bottom: 15px; 
+}
+.tag-light { color: #fb923c; }
+
+.section-heading { 
+  font-size: 2.8rem; 
+  font-weight: 800; 
+  color: var(--primary-blue); 
+  margin-bottom: 20px; 
+  line-height: 1.2;
+}
+.text-white { color: white; }
+
+.who-text { 
+  font-size: 1.2rem; 
+  line-height: 1.8; 
+  color: #334155; 
+  margin-bottom: 25px; 
+  text-align: justify;
+}
+
+.section-desc-center {
+  font-size: 1.2rem;
+  color: #64748b;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.text-gray { color: #cbd5e1; }
+
+/* --- VALUES GRID --- */
+.values-grid {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+  gap: 35px; 
+  max-width: 1300px; 
+  margin: 0 auto;
+}
+
+.value-card-modern {
+  background: white; 
+  padding: 40px 30px; 
+  border-radius: 16px; 
+  box-shadow: 0 10px 30px -5px rgba(0,0,0,0.05); 
+  transition: 0.3s; 
+  border-top: 4px solid transparent;
+  text-align: left;
+}
+
+.value-card-modern:hover { 
+  transform: translateY(-10px); 
+  border-top: 4px solid var(--accent-orange); 
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+}
+
+.value-icon-box { 
+  font-size: 2.5rem; 
+  color: var(--accent-orange); 
+  margin-bottom: 20px; 
+}
+
+.value-card-modern h3 { 
+  font-size: 1.4rem; 
+  margin-bottom: 15px; 
+  color: var(--primary-blue); 
+}
+
+.value-card-modern p { 
+  font-size: 1.05rem; 
+  line-height: 1.6; 
+  color: #64748b; 
+}
+
+/* --- PROCESS STEPS --- */
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.step-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.step-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.03);
+}
+
+.step-number {
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgba(249, 115, 22, 0.2);
+  line-height: 1;
+  margin-bottom: -20px;
+}
+
+.step-card h3 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.step-card p {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* --- LIST & BUTTONS --- */
+.who-list { list-style: none; padding: 0; margin-bottom: 30px; }
+.who-list li { 
+  font-size: 1.15rem; 
+  color: #334155; 
+  margin-bottom: 12px; 
+}
+.who-list strong { color: var(--primary-blue); }
+
+.btn-group-who { display: flex; gap: 20px; }
+
+.btn-primary-who {
+  background: var(--accent-orange); color: white; padding: 15px 35px; border-radius: 50px; font-weight: 700; border: none; transition: 0.3s;
+}
+.btn-primary-who:hover { background: #ea580c; transform: translateY(-3px); }
+
+.btn-outline-who {
+  background: transparent; border: 2px solid var(--primary-blue); color: var(--primary-blue); padding: 15px 35px; border-radius: 50px; font-weight: 700; transition: 0.3s;
+}
+.btn-outline-who:hover { background: var(--primary-blue); color: white; transform: translateY(-3px); }
+
+/* --- IMAGES & ANIMATION --- */
+.img-wrapper-who { 
+  overflow: hidden; 
+  border-radius: 20px; 
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); 
+}
+
+.responsive-img-who { 
+  width: 100%; 
+  height: auto; 
+  display: block; 
+  transition: transform 0.6s ease;
+}
+
+.zoom-effect:hover { transform: scale(1.05); }
+
+/* Animation Classes */
+.fade-in { animation: fadeIn 1s ease-out forwards; }
+.slide-up { animation: slideUp 1s ease-out forwards; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+
+/* --- RESPONSIVE MEDIA QUERIES (UPDATED) --- */
+
+/* Tablet View (Max Width: 960px) */
+@media (max-width: 960px) {
+  .hero-title-large { font-size: 2.8rem; }
+  .grid-container-who { grid-template-columns: 1fr; gap: 50px; }
+  
+  /* Stack the 3 steps vertically */
+  .steps-container { grid-template-columns: 1fr; gap: 30px; }
+  
+  /* Ensure image is on top for both layouts on mobile */
+  .img-col { order: -1; }
+  .text-col { order: 1; }
+  
+  .reverse-layout .img-col { order: -1; }
+  .reverse-layout .text-col { order: 1; }
+  
+  .btn-group-who { flex-direction: column; width: 100%; }
+  
+  .section-box { padding: 60px 5%; }
+}
+
+/* Mobile View (Max Width: 600px) */
+@media (max-width: 600px) {
+  .hero-title-large { 
+    font-size: 2.5rem; 
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr; /* One card per row */
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .who-text {
+    text-align: left;
+    font-size: 1.1rem;
+  }
+
+  .step-number {
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,156 @@
+/* Main Footer Container */
+.footer {
+  width: 100%;
+  background-color: #0f172a; /* primary-blue fallback */
+  color: #e2e8f0;
+  padding: 80px 0 0;
+  font-family: 'Inter', sans-serif;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: grid;
+  /* Auto-fit is good, but 300px is too wide for some small phones. 
+     We will adjust this in media queries. */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+/* Columns */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Titles */
+.footer-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 3px;
+  background-color: #f97316; /* accent-orange fallback */
+  border-radius: 2px;
+}
+
+.company-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.icon {
+  color: #f97316; /* accent-orange */
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Links List */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #e2e8f0;
+  transition: color 0.3s ease;
+  display: block;
+}
+
+.footer-links li:hover {
+  transform: translateX(5px);
+}
+
+.footer-links li:hover a {
+  color: #f97316;
+}
+
+/* Services List */
+.footer-services {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-services li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.check {
+  color: #22c55e; /* Green check color */
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  background-color: #020617; /* Darker shade */
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9rem;
+  color: #64748b;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --- RESPONSIVE MEDIA QUERIES (UPDATED) --- */
+
+/* Tablet & Mobile (Max Width: 768px) */
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 50px; /* Less top padding */
+  }
+
+  .footer-container {
+    /* Switch to 1 column layout for mobile to prevent squashing */
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .footer-column {
+    /* Optional: Center align text on mobile for a neat look. 
+       If you prefer left align, remove 'align-items: center' and 'text-align: center' */
+    /* align-items: center; 
+       text-align: center; */
+  }
+  
+  /* If keeping left align, ensure icons align properly */
+  .contact-item {
+    align-items: flex-start;
+  }
+}
