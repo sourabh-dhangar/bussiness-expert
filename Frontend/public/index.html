@@ -26,6 +26,57 @@
     -->
     <title>React App</title>
   </head>
+  <!-- WorknAI Chatbot Toggle -->
+<script>
+  (function () {
+    if (window.__worknai_loaded__) return;
+    window.__worknai_loaded__ = true;
+
+    let isOpen = false;
+
+    // Create iframe (chatbot)
+    const iframe = document.createElement("iframe");
+    iframe.src = "https://worknai-chatbot-frontend.vercel.app/";
+    iframe.style.position = "fixed";
+    iframe.style.bottom = "90px";
+    iframe.style.right = "20px";
+    iframe.style.width = "360px";
+    iframe.style.height = "520px";
+    iframe.style.border = "none";
+    iframe.style.borderRadius = "16px";
+    iframe.style.zIndex = "999999";
+    iframe.style.boxShadow = "0 10px 40px rgba(0,0,0,0.25)";
+    iframe.style.display = "none";
+
+    // Create toggle button
+    const button = document.createElement("button");
+    button.innerHTML = "💬";
+    button.style.position = "fixed";
+    button.style.bottom = "20px";
+    button.style.right = "20px";
+    button.style.width = "56px";
+    button.style.height = "56px";
+    button.style.borderRadius = "50%";
+    button.style.border = "none";
+    button.style.cursor = "pointer";
+    button.style.fontSize = "24px";
+    button.style.background =
+      "linear-gradient(135deg, #22d3ee, #3b82f6, #a855f7)";
+    button.style.color = "#fff";
+    button.style.zIndex = "1000000";
+    button.style.boxShadow = "0 8px 30px rgba(0,0,0,0.3)";
+
+    button.onclick = function () {
+      isOpen = !isOpen;
+      iframe.style.display = isOpen ? "block" : "none";
+      button.innerHTML = isOpen ? "✖" : "💬";
+    };
+
+    document.body.appendChild(iframe);
+    document.body.appendChild(button);
+  })();
+</script>
+<!-- End WorknAI Chatbot -->
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
