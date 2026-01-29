@@ -55,7 +55,7 @@ const HomePage = () => {
           <div className="animate-sequence-1">
             <span className="badge-home"><FaGlobeAsia/> Your Gateway to Success</span>
           </div>
-          <h1 className="animate-sequence-2">Your Business Success <br/> Starts in <span className="highlight-text">India</span></h1>
+          <h1 className="animate-sequence-2">Yours Business Success <br/> Starts in <span className="highlight-text">India</span></h1>
           <p className="animate-sequence-3">
             Empowering global investors to establish, grow, and succeed in India's dynamic market with 100% compliance.
           </p>
